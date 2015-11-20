@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimaryDark">@color/darkBlueColor</item>
+        <item name="colorControlNormal">@color/white_color</item>
+        <item name="colorControlActivated">@color/blueColor</item>
+        <item name="colorControlHighlight">@color/blueColor</item>
+        <item name="android:textColorHint">@color/white_color</item>
+    </style>
+</resources>

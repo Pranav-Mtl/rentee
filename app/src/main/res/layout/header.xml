@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/signup_bg"
+    >
+
+
+
+            <ImageView
+                android:id="@+id/drawer_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/ic_demo_img"
+                />
+
+        <TextView
+            android:id="@+id/drawer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:text="Pranav Mittal"
+
+            />
+
+            <TextView
+                android:id="@+id/drawer_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:text="Rohini"
+                android:drawableLeft="@drawable/ic_side_location"
+                android:drawablePadding="5dp"
+                />
+
+
+
+
+</LinearLayout>
