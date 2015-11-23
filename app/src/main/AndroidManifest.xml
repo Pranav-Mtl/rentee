@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".HomeScreen"
+            android:name=".SeekerQuestion"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +22,31 @@
             android:label="@string/title_activity_signin" >
         </activity>
         -->
-        <!--<activity
+        <!--
+        <activity
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen" >
+        </activity>
+        -->
+        <activity android:name=".SearchLister" >
+        </activity>
+        <!--
+        <activity android:name=".SearchSeeker" >
+        </activity>
+        -->
+        <activity android:name=".QwnerQuestionOne" >
+        </activity>
+        <activity android:name=".OwnerQuestionTwo" >
+        </activity>
+        <activity android:name=".OwnerQuestionThree" >
+        </activity>
+        <activity android:name=".RoomateQuestionOne" >
+        </activity>
+        <activity android:name=".RoomateQuestionTwo" >
+        </activity>
+        <activity android:name=".RoomateQuestionThree" >
+        </activity>
+        <!--<activity android:name=".SeekerQuestion" >
         </activity>-->
     </application>
 

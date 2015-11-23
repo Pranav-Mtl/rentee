@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.appslure.rentee.RoomateQuestionOne">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:theme="@style/Toolbar_Theme"
+        android:elevation="4dp"
+        android:background="@color/toolbar_bg"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:text="List your property"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/toolbar_text_size"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/activity_text_size"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:background="@drawable/ic_home_et_bg"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textColor="@color/blue_text_color"
+            android:layout_marginTop="5dp"
+
+            android:textSize="@dimen/activity_text_size"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_et_bg"
+            android:text="Use current location"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/activity_text_size"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rent Expected"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/activity_text_size"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:background="@drawable/ic_home_et_bg"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deposit per person"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/activity_text_size"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:background="@drawable/ic_home_et_bg"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flatmates needed"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/activity_text_size"
+            />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home_spinner_bg"
+            ></Spinner>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customized_button"
+            android:text="next"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/button_text_size"
+            />
+    </LinearLayout>
+</RelativeLayout>

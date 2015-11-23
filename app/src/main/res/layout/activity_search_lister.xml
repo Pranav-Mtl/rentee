@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/signup_bg"
+    tools:context="com.appslure.rentee.SearchLister">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:theme="@style/Toolbar_Theme"
+        android:elevation="4dp"
+        android:background="@android:color/transparent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:text="Search for Seekers"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/toolbar_text_size"
+            />
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        >
+
+
+
+    <AutoCompleteTextView
+        android:id="@+id/search_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_color"
+        android:hint="location"
+        android:drawablePadding="5dp"
+        android:textSize="@dimen/activity_text_size"
+        android:drawableLeft="@drawable/ic_search"
+        />
+
+    <RadioGroup
+        android:layout_below="@id/search_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_color"
+            android:text="Sort by Rent"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="high to low"
+            android:textColor="@color/white_color"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="low to high"
+            android:textColor="@color/white_color"
+            />
+    </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@color/white_color"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/customized_button"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

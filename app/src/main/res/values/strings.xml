@@ -17,13 +17,15 @@
 
     <color name="blueColor">#2e6cff</color>
     <color name="lightBlueColor">#99b7ff</color>
-    <color name="darkBlueColor">#003dcc</color>
+    <color name="darkBlueColor">#020814</color>
 
     <color name="button_default">#2e6cff</color>
     <color name="button_pressed">#99b7ff</color>
     <color name="drawer_text_color">#3e3e3e</color>
+    <color name="blue_text_color">#3e3e3e</color>
 
     <color name="signup_bg">#0b1528</color>
+    <color name="toolbar_bg">#0b1528</color>
     <color name="accentColor">#000</color>
 
     <color name="white_color">#fff</color>
@@ -31,4 +33,36 @@
 
     <string name="title_activity_signin">Signin</string>
     <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_search_lister">SearchLister</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="occupation">
+        <item>Working</item>
+        <item>Students</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="interested">
+        <item>PG</item>
+        <item>Non-PG</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>

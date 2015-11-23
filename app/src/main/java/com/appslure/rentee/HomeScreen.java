@@ -18,6 +18,8 @@ import android.widget.ImageView;
 
 import com.appslure.rentee.Constant.Constant;
 import com.appslure.rentee.adapter.DrawerAdapter;
+import com.appslure.rentee.adapter.HomeScreenAdapter;
+import com.appslure.rentee.container.PagerContainer;
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -31,6 +33,11 @@ public class HomeScreen extends AppCompatActivity {
 
     DrawerAdapter drawerAdapter;
     ViewPager mViewPager;
+
+    PagerContainer mContainer;
+
+    RecyclerView propertyList;
+    HomeScreenAdapter objHomeScreenAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,110 +102,19 @@ public class HomeScreen extends AppCompatActivity {
         Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
         mDrawerToggle.syncState();
 
+        propertyList= (RecyclerView) findViewById(R.id.property_list);
+        propertyList.setHasFixedSize(true);
+
+        final LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        propertyList.setLayoutManager(llm);
+        objHomeScreenAdapter=new HomeScreenAdapter(getApplicationContext());
+        propertyList.setAdapter(objHomeScreenAdapter);
 
 
-        /* IMAGE SLIDER*/
-
-        ViewPager pager=(ViewPager) findViewById(R.id.pager);
-        pager.setPageTransformer(true, new BigImage());
-
-        DealerPageAdapter adapter=new DealerPageAdapter(getApplicationContext());
-        pager.setAdapter(adapter);
-        // pager.setPageMargin(45);
-        pager.setClipChildren(false);
-        pager.setClipToPadding(false);
-        pager.setPadding(10, 0, 10, 0);
-
-    }
-
-    private class DealerPageAdapter extends PagerAdapter {
-        Context context;
-        LayoutInflater inflater;
-        ImageView imgPager;
-
-        DealerPageAdapter(Context contex) {
-            this.context = contex;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-
-
-            inflater = (LayoutInflater) context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View itemView = inflater.inflate(R.layout.home_latest_listing, container,
-                    false);
-
-
-
-
-            ((ViewPager) container).addView(itemView);
-
-            return itemView;
-        }
-
-        @Override
-        public int getCount() {
-            return 5;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return (view == object);
-        }
-
-        public float getPageWidth(int position)
-        {
-            return .8f;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView((View) object);
-        }
-    }
-
-    private class BigImage implements ViewPager.PageTransformer{
-
-        @Override
-        public void transformPage(View page, float position) {
-            int pageWidth = page.getWidth();
-            int pageHeight = page.getHeight();
-            if (position < -1) { // [-Infinity,-1)
-
-                page.setScaleX(MIN_SCALE);
-                page.setScaleY(MIN_SCALE);
-
-
-            } else if (position <= 1) { // [-1,1]
-                // Modify the default slide transition to shrink the page as well
-                float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
-                float vertMargin = pageHeight * (1 - scaleFactor) / 2;
-                float horzMargin = pageWidth * (1 - scaleFactor) / 2;
-                if (position < 0) {
-                    page.setTranslationX(horzMargin - vertMargin / 2);
-                } else {
-                    page.setTranslationX(-horzMargin + vertMargin / 2);
-                }
-
-                // Scale the page down (between MIN_SCALE and 1)
-                page.setScaleX(scaleFactor);
-                page.setScaleY(scaleFactor);
-
-                // Fade the page relative to its size.
-                // page.setAlpha(MIN_ALPHA + (scaleFactor - MIN_SCALE) / (1 - MIN_SCALE) * (1 - MIN_ALPHA));
-                //page.setBackground(getR.drawable.ball2);
-
-                page.clearAnimation();
-            } else { // (1,+Infinity]
-                // This page is way off-screen to the right.
-//            view.setAlpha(MIN_ALPHA);
-                page.setScaleX(MIN_SCALE);
-                page.setScaleY(MIN_SCALE);
 
             }
-        }
-    }
+
 
 
 }

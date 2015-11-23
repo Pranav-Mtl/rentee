@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/RangeBar/RangeBar.iml" filepath="$PROJECT_DIR$/RangeBar/RangeBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/Rentee.iml" filepath="$PROJECT_DIR$/Rentee.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
