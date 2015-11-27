@@ -13,25 +13,13 @@ import android.widget.ImageView;
 
 
 
-public class PagerContainer extends FrameLayout implements ViewPager.OnPageChangeListener {
+ public class PagerContainer extends FrameLayout implements ViewPager.OnPageChangeListener {
     private ViewPager mPager;
     boolean mNeedsRedraw = false;
-    static int imgposition=0;
-    static ImageButton one;
-    static ImageButton two;
-    static ImageButton three;
-    static ImageButton four;
-    static ImageButton five;
     static int position;
     static Context mContext;
-    static ImageView imageView;
 
-
-
-
-
-
-public static void positionImage(int number)
+ public static void positionImage(int number)
 {
 position=number;
 }

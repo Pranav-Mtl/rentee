@@ -10,4 +10,8 @@ public class RoomateQuestionThree extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roomate_question_three);
     }
+
+    private void initialize(){
+
+    }
 }
